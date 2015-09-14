@@ -1,26 +1,25 @@
-#MongoDB
+# MongoDB
 
+## What is MongoDB?
+- A NoSql Database, meaning it is not a relational database and does not use tables like SQL.
+- MongoDb uses documents, which look like json objects saved on a file.
 
-db.getMongo() : returns the connection to the database
+## Documents
+A record in MongoDB is a document, which is a data structure composed of field and value pairs. MongoDB documents are similar to JSON objects. The values of fields may include other documents, arrays, and arrays of documents.
 
-use test -switches to the test database
+![./json.png](./json.png)
 
-db.restaurants.remove()  removes someethign from the resraurants collection
+## Collections
 
+MongoDB stores documents in collections. Collections are analogous to tables in relational databases. Unlike a table, however, a collection does not require its documents to have the same schema.
 
-db.restaurants.update({"name":"jack"}, $set{"name":"rudy"})
-this will the first document that matches those attributes
+In MongoDB, documents stored in a collection must have a unique id field that acts as a primary key.
 
-Using the multi option in the method you can update  multiple documents and set what you want to update
+## Mongoose
+![](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpli7-TI-3_BQRQW3DFxQGecqI1BXOzdtG859HraHcvqCxVxVGug)
 
+Mongoose is an ORM that works with MongoDb.
 
-db.restaurants.update(
-  { "address.zipcode": "10016", cuisine: "Other" },
-  {
-    $set: { cuisine: "Category To Be Determined" },
-    $currentDate: { "lastModified": true }
-  },
-  { multi: true}
-)
+While MongoDb does not require you to create a schema or model. Mongoose allows you to do so.
 
-db.restaurants.find({"name":"jack"}) will find document with name jack
+![./mongoose.png](./mongoose.png)
