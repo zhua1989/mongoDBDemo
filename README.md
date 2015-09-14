@@ -22,4 +22,16 @@ Mongoose is an ORM that works with MongoDb.
 
 While MongoDb does not require you to create a schema or model. Mongoose allows you to do so.
 
+### Mongoose Schema
+
+![./mongoose3.png](./mongoose3.png)
+
+### Mongoose Models and Instances
+
 ![./mongoose.png](./mongoose.png)
+
+
+## Resources
+- [Mongoose Docs](http://mongoosejs.com/index.html)
+- [Mongo Docs](https://www.mongodb.org/)
+- [Helpful Tutorial Using Express/Node/Mongo](https://scotch.io/tutorials/using-mongoosejs-in-node-js-and-mongodb-applications)
