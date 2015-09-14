@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Zombies</title>
+</head>
+<body>
+
+<h1>Brains</h1>
+<a href="/zombies/new">Create New Zombie</a>
+<ul>
+<% zombies.forEach(function(e){ %>
+<li>Name: <a href="/zombies/<%=e.id%>"><%=e.name%></li>
+ <% }) %>
+</ul>
+
+
+
+</body>
+</html>

@@ -1,5 +1,4 @@
 {
-<<<<<<< HEAD
   "name": "mongo_demo",
   "version": "1.0.0",
   "description": "",
@@ -10,12 +9,10 @@
     "mongoose": "^4.1.6"
   },
   "devDependencies": {},
-=======
   "name": "mongodbdemo",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
->>>>>>> a54f159893f2d2f84f1c6cba699c8a608493a749
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
