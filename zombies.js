@@ -3,7 +3,14 @@ var Schema = mongoose.Schema;
 var express = require('express');
 var app = express();
 var fs = require('fs');
-var ejs = require('ejs')
+var ejs = require('ejs');
+
+//middleware
+var bodyParser = require('body-parser');
+var urlencodedBodyParser = bodyParser.urlencoded({extended: false});
+app.use(urlencodedBodyParser);
+var methodOverride = require('method-override');
+app.use(methodOverride('_method'));
 
 var zombieSchema = new Schema({
   name: String,
@@ -72,6 +79,50 @@ app.get("/", function(req,res){
 
   })
 
+app.post('/zombies', function(req,res){
+  console.log(req.body)
+ // create a new user
+ var newZombie = new ZombieModel({
+   name:req.body.name,
+   age:req.body.age,
+   zombie:req.body.zombie,
+   location:req.body.location,
+   rage:req.body.rage
+ });
+
+ // save the user
+ newZombie.save(function(err) {
+   if (err) throw err;
+
+   console.log('Zombie created!');
+ });
+
+ res.redirect('/');
+});
 
 
+
+
+app.get('/zombies/new', function(req, res){
+ var htmlNewZombieForm = fs.readFileSync('./views/new.html', 'utf8');
+ var rendered = ejs.render(htmlNewZombieForm);
+ res.send(rendered);
+});
+
+
+app.delete('/zombies/:id', function (req, res) {
+  console.log(params.id)
+// get the user starlord55
+  ZombieModel.find({ id: params.id }, function(err, user) {
+    if (err) throw err;
+
+    // delete him
+    zombieModel.remove(function(err) {
+      if (err) throw err;
+
+      console.log('Zombie successfully deleted!');
+    });
+  });
+
+});
 

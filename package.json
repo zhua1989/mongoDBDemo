@@ -1,18 +1,16 @@
 {
-  "name": "mongo_demo",
-  "version": "1.0.0",
-  "description": "",
-  "main": "kittens.js",
-  "dependencies": {
-    "ejs": "^2.3.4",
-    "express": "^4.13.3",
-    "mongoose": "^4.1.6"
-  },
-  "devDependencies": {},
   "name": "mongodbdemo",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "dependencies": {
+    "body-parser": "^1.13.3",
+    "ejs": "^2.3.4",
+    "express": "^4.13.3",
+    "method-override": "^2.3.5",
+    "mongoose": "^4.1.6"
+  },
+  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

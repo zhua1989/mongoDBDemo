@@ -10,7 +10,10 @@
 <ul>
 <% zombies.forEach(function(e){ %>
 <li>Name: <a href="/zombies/<%=e.id%>"><%=e.name%></li>
- <% }) %>
+<form  method="POST" action="/zombies/<%=e.id%>?_method=DELETE">
+    <input type="submit" value="delete thread">
+</form>   
+<% }) %>
 </ul>
 
 
